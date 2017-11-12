@@ -9,6 +9,7 @@ https://youtu.be/Q2rxwgBQ4ZQ
 We connected 2 ultrasonic sensors, facing opposite lateral directions. We also connected gyroscope.
 
 Data acquired:
+
 -ultrasonic_left.distance_centimeters - distance to the left wall;
 
 -ultrasonic_right.distance_centimeters - distance to the right wall;
@@ -18,3 +19,5 @@ gyroscope.angle - angle;
 gyroscope.rate - rate;
 
 1000 values;
+
+Kostya chose circle, Nikita - rectangle for the path.
