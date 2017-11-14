@@ -84,6 +84,6 @@ plt.legend()
 plt.title('Estimate vs. iteration step', fontweight='bold')
 plt.xlabel('Iteration')
 plt.ylabel('Ultrasonic distance')
-
+# plt.savefig('nikita_filtered_data.png')
 
 plt.show()
