@@ -21,8 +21,8 @@ motor_right.run_timed(time_sp=50000, speed_sp=150)
 motor_left.run_timed(time_sp=50000, speed_sp=500)
 motor_right.run_timed(time_sp=50000, speed_sp=500)
 '''
-motor_left.run_timed(time_sp=60000, speed_sp=400)
-motor_right.run_timed(time_sp=60000, speed_sp=200)
+motor_left.run_timed(time_sp=15000, speed_sp=400)
+motor_right.run_timed(time_sp=15000, speed_sp=200)
 
 counter = 0
 def read_data(filename):
@@ -54,9 +54,9 @@ def get_data():
     global f
     if counter ==1000:
         return
-    threading.Timer(0.01, get_data).start()
+    threading.Timer(0.1, get_data).start()
     counter += 1
-    f.write( bytes('{0} {1} {2} {3} {4}\n'.format(str(0.01*counter), str(ultrasonic_left.distance_centimeters), str(ultrasonic_right.distance_centimeters), str(gyroscope.angle), str(gyroscope.rate) ), 'UTF-8') )
+    f.write( bytes('{0} {1} {2} {3} {4}\n'.format(str(0.1*counter), str(ultrasonic_left.distance_centimeters), str(ultrasonic_right.distance_centimeters), str(gyroscope.angle), str(gyroscope.rate) ), 'UTF-8') )
     # print('Left ultrasonic data ' + str(ultrasonic_left.distance_centimeters))
     # print('Right ultrasonic data ' + str(ultrasonic_right.distance_centimeters))
     # print('Gyroscope data angle ' + str(gyroscope.angle))
